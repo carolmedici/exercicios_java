@@ -10,28 +10,38 @@ public class ex27 {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		
+		int N = sc.nextInt();
 		int i;
-		int positivo=0;
-		double total =0;
+		int totalCobaia = 0;
+		int coelhos = 0;
+		int sapos = 0 ;
+		int ratos = 0;
 		
-		for(i=1; i<=6;i++) {
-			double num = sc.nextDouble();
+		for(i=0; i<N; i++) {
+			int quantia = sc.nextInt();
+			char cobaia = sc.next().charAt(0);
 			
-			if(num > 0) {
-				positivo++;
-				total = total+num;
-			}
+			totalCobaia = totalCobaia + quantia;
+			if(cobaia == 'C') {
+				coelhos = coelhos + quantia;
+			}else if (cobaia == 'S') {
+				sapos = sapos + quantia;
+			}else if (cobaia == 'R') {
+				ratos = ratos + quantia;
+			}}
+		
+			float percentualCoelhos = (float) 100 / totalCobaia * coelhos;
+			float percentualRatos = (float) 100 / totalCobaia * ratos;
+			float percentualSapos = (float) 100 / totalCobaia * sapos;
 			
-			 
-		}
-		
-		double media = total/positivo;
-		
-		
-		System.out.println(positivo + " valores positivos");
-		System.out.printf("%.1f%n", media);
-		
+			System.out.println("Total: " + totalCobaia + " cobaias");
+			System.out.println("Total de coelhos: " + coelhos);
+			System.out.println("Total de ratos: " + ratos);
+			System.out.println("Total de sapos: " + sapos);
+			System.out.printf("Percentual de coelhos: %.2f %%%n", percentualCoelhos);
+			System.out.printf("Percentual de ratos: %.2f %%%n", percentualRatos);
+			System.out.printf("Percentual de sapos: %.2f %%%n", percentualSapos );
+			
 		sc.close();
 	}
 
