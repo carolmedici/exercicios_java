@@ -7,7 +7,6 @@ public class ex34 {
 		// TODO Auto-generated method stub
 		
 
-	
 		        Scanner sc = new Scanner(System.in);
 
 		        String entrada[] = new String[4];
@@ -41,10 +40,10 @@ public class ex34 {
 		        minutos = ((duracaoSegundos % 86400) % 3600) / 60;
 		        segundos = ((duracaoSegundos % 86400) % 3600) % 60;
 
-		        System.out.println(dias + " dia(s)");
-		        System.out.println(horas + " hora(s)");
-		        System.out.println(minutos + " minuto(s)");
-		        System.out.println(segundos + " segundo(s)");
+		        System.out.println("Duração do evento em" + dias + " dia(s)");
+		        System.out.println("Duração do evento em" + horas + " hora(s)");
+		        System.out.println("Duração do evento em" + minutos + " minuto(s)");
+		        System.out.println("Duração do evento em" +segundos + " segundo(s)");
 
 		        sc.close();
 		    }
