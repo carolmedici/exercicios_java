@@ -1,0 +1,41 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Programa_mais_velho {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Quantas pessoas serão inseridas?");
+		int n = sc.nextInt();
+		int mais_velha = 0;
+		String velha = "";
+		
+		String[] nome = new String[n];
+		int[] idade = new int[n];
+		
+		for(int i = 0; i < n; i++) {
+			System.out.printf("Dados da %da pessoa: \n", i + 1 );
+			System.out.print("Nome:");
+			nome[i]= sc.next();
+			System.out.println("Idade:");
+			idade[i] = sc.nextInt();
+			
+			if(idade[i] > mais_velha) {
+			mais_velha = idade[i];
+			velha = nome[i];		
+			}
+		}
+		System.out.println("Pessoa mais velha: " + velha);
+		
+		
+		
+		
+		sc.close();
+
+	}
+
+}
