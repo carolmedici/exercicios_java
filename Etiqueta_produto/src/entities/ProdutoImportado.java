@@ -1,4 +1,4 @@
-package entities;
+package entidade;
 
 public class ProdutoImportado extends Produto{
 
@@ -27,13 +27,14 @@ public class ProdutoImportado extends Produto{
 	
 	@Override
 	public String precoEtiqueta() {
-		return super.getNome()
+		return getNome()
 				+ " R$"
-				+ PrecoFinal()
+				+ String.format("%.2f",PrecoFinal())
 				+ " (Taxa da Alfândega: R$"
-				+ taxaAlfandega
-				+")";
+				+ String.format("%.2f",taxaAlfandega)
+				+ ")";
 		
 			
 	}
+
 }
