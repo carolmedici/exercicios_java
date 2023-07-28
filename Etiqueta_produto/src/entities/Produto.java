@@ -1,4 +1,4 @@
-package entities;
+package entidade;
 
 public class Produto {
 	
@@ -33,7 +33,7 @@ public class Produto {
 	public String precoEtiqueta() {
 		return nome
 				+ " R$"
-				+ preco;
+				+ String.format("%.2f",preco);
 	}
 	
 
