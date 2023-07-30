@@ -1,18 +1,23 @@
 package application;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Produto;
 import entities.ProdutoImportado;
+import entities.Produto_Usado;
 
 public class Programa_Etiquetas_Produtos {
 
 	
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws ParseException {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
@@ -31,20 +36,28 @@ public class Programa_Etiquetas_Produtos {
 				System.out.print("Preço: ");
 				Double preco = sc.nextDouble();
 				
-				if(tipoEtiqueta == i) {
+				if(tipoEtiqueta == 'i') {
 					System.out.println("Taxa da Alfândega: ");
 					double taxaAlfandega = sc.nextDouble();
-														
-					list.add(new ProdutoImportado(nome, preco, taxaAlfandega));
+					
+					Produto pro = new ProdutoImportado(nome, preco, taxaAlfandega)	;								
+					list.add(pro);
+				} else if(tipoEtiqueta == 'u'){
+					System.out.println("Data de Fabricação (DD/MM/YYYY): ");
+					Date dataFabricacao = sdf.parse(sc.next());
+					
+					Produto pro = new Produto_Usado(nome, preco, dataFabricacao);
+					list.add(pro);
 				}else  {
-					list.add(new Produto(nome, preco));
+					Produto pro = new Produto(nome, preco);
+					list.add(pro);
 				}
 			}
 			
 			System.out.println();
 			System.out.println("Etiquetas de preço:");
 			for (Produto pro : list) {
-				System.out.println(pro.getNome() + " R$ " + String.format("%.2f", pro.getPreco()));
+				System.out.println( pro.precoEtiqueta());
 			}
 			
 			
