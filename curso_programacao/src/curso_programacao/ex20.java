@@ -17,10 +17,10 @@ public class ex20 {
 			if ( (i % 2) != 0) {
 			
 			System.out.println(i);
-		}}
+		}
 			
+		sc.close();
 			
-			sc.close();
-	}
+	}}
 
 }
