@@ -9,7 +9,7 @@ public class tabuada {
 		
 		System.out.println("Tabuada");
 
-        System.out.println("Digite o número");
+        System.out.println("Digite o número limite");
         int xLinha = sc.nextInt();
         int xColuna = 3;
         int[][] tabuada = new int[xLinha][xColuna];
