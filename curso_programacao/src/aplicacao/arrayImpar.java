@@ -11,29 +11,18 @@ public class arrayImpar {
 		System.out.println("Números ímpares do 0 até o limite");
 		System.out.println("Digite o número limite");
 		int limite = sc.nextInt();
-		int impar = 0;
-
+		int tamanhoArray = (limite + 1)/2;
 		
-		for(int i=0; i<=limite;i++) {
-		if(i % 2 !=0) {
-			impar ++;
-		}
 		
-			}	
-		
-		int[] impares = new int[impar];
+		int[] impares = new int[tamanhoArray];
 		int index = 0;
 		for(int j=0; j<=limite;j++) {
-			if(j % 2 !=0) {
-			
-				
+			if(j % 2 !=0) {	
 				impares[index] = j;
 				index++;
-				}
-			
 			}
-			
-			  System.out.println(Arrays.toString(impares));
+		}
+		 System.out.println(Arrays.toString(impares));
 
 		sc.close();
 	}
