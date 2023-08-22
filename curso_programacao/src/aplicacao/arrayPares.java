@@ -11,42 +11,19 @@ public class arrayPares {
 	System.out.println("Números pares do 0 até o limite");
 	System.out.println("Digite o número limite");
 	int limite = sc.nextInt();
-	int par = 0;
-
+	int tamanhoArray = limite /2 + 1;
 	
-	for(int i=0; i<=limite;i++) {
-	if(i % 2 ==0) {
-		par ++;
-	}
-	
-		}	
-	
-	int[] pares = new int[par];
+	int[] pares = new int[tamanhoArray];
 	int index = 0;
 	for(int j=0; j<=limite;j++) {
-		if(j % 2 ==0) {
-		
-			
+		if(j % 2 ==0) {			
 			pares[index] = j;
 			index++;
-			}
-		
 		}
-		
+	}	
 		  System.out.println(Arrays.toString(pares));
-	
-	
 	
 	sc.close();
 	}
 
 }
-
-/*/**
- * Retorna um array de números pares, até o valor limite, começando de zero.
- * 
- * @param limite - Limite 
- * 
- * @return resultado 
- 
-public int[] numerosParesArray(final Integer limite);*/
