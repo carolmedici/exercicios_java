@@ -15,29 +15,25 @@ public class arrayPrimos {
 
 		int nPrimos = 0;
 		boolean primo = true;
-		for(int i=0; i<=n; i++) {
+		for(int i=2; i<=n; i++) {
 			primo = true;
-			for(int j =2; j<i; j++) {
+			for(int j =2; j<=Math.sqrt(i); j++) {
 				if(i % j ==0) {
 					primo = false;
 					break;
 				}
 			}if(primo) {
 				nPrimos++;			
-			
 			}
 		}
-		
-		
-		 
-	     		
+			
 		int index = 0;
 		int[] primos = new int[nPrimos];
 		
-		for(int i=0; i<=n; i++) {
-			primos[index] =i;
+		for(int i=2; i<=n; i++) {
+		
 			primo = true;
-			for(int j =2; j<i; j++) {
+			for(int j =2; j<=Math.sqrt(i); j++) {
 				if(i % j ==0) {
 					primo = false;
 					
