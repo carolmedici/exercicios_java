@@ -14,6 +14,8 @@ public class textoDuplicado {
 		int quantidade = sc.nextInt();
 		 sc.nextLine();
 		
+		System.out.println();
+		
 		ArrayList<String> lista = new ArrayList<>();
 		System.out.println("Digite as frases separadas por linhas.");
 		
@@ -34,8 +36,8 @@ public class textoDuplicado {
 	            }
 	        }
 		
-	          
-		System.out.println("A lista digitada foi: " + lista);
+	    System.out.println();      
+		System.out.println("A lista de textos digitada foi: " + lista);
 		System.out.println("Os textos duplicados são: " + duplicados);
 		
 		sc.close();
