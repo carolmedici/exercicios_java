@@ -27,24 +27,24 @@ public class removerItensLista {
 
 		System.out.println("A lista digitada foi: " + lista);
 
-		Set<Integer> listaRemovidos = new HashSet<>();
 		Set<Integer> numeroVisto = new HashSet<>();
 		
 	        for (int n : lista) {
-	            if (numeroVisto.contains(n)) {
-	                
-	          
-	                listaRemovidos.add(n);
-	                lista.remove(n);
-	                break;
-	            }else {
-	            	numeroVisto.add(n);
+	            if (!numeroVisto.contains(n)) {
+	                         
+	                numeroVisto.add(n);
 	            }
 	        }
 		
 	          
-		System.out.println("Removendo os números duplicados, a lista fica assim: " + lista);
-	
+		System.out.println("Removendo os números duplicados, a lista fica assim: " + numeroVisto);
+		
+		
+		
+		
+		
+		
+		
 		sc.close();
 	}
 
