@@ -12,9 +12,9 @@ public class ex38 {
 		int y = sc.nextInt();
 		
 		int maior = Math.max(x, y);
-		int menor = Math.min(x, y);
+		int menor = Math.min(x, y)+1;
 				
-		for(int i = menor; i <= maior ; i++) {
+		for(int i = menor; i < maior ; i++) {
 			if(i % 5 == 2 || i % 5 == 3 ) {
 				if(i>0) {
 				System.out.println(i);
