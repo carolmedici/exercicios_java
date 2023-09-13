@@ -28,21 +28,26 @@ public class ex47 {
 		
 		int index = sc.nextInt();
 		
-		 
-		
-		while(index > (tamanho - 1))
-		{
-			System.out.println("Erro: número maior que o limite da lista. Tente novamente");
-			index = sc.nextInt();
-		}
-	
-		
-		
+		System.out.println("Lista digitada: " + listaNumeros);
 		System.out.println( "O número escolhido é o: "+ listaNumeros.get(index));
-		System.out.println("Do lado direito dele fica o número " + listaNumeros.get(index+1) + " e do esquerdo o " + listaNumeros.get(index-1));
 		
+		try {
+		 	
+			System.out.println("Do lado direito dele fica o número " + listaNumeros.get(index+1)); 
+		}
 		
-		System.out.println();
+		catch (Exception IndexOutOfBoundsException) {
+
+			System.out.println("Erro: número fora do limite da lista: " + IndexOutOfBoundsException.getMessage());
+		}
+		
+		try {
+			System.out.println("Do lado esquerdo o " + listaNumeros.get(index-1));
+		}
+		catch (Exception IndexOutOfBoundsException) {
+
+			System.out.println("Erro: número fora do limite da lista: " + IndexOutOfBoundsException.getMessage());
+		}
 				
 		sc.close();
 	}
