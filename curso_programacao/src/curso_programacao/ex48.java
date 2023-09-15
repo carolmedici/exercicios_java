@@ -20,7 +20,9 @@ public class ex48 {
 		
 		String[][] tabela = new String[xLinha][xColuna]; 
 		
-		for(int linha = 0; linha < xLinha; linha++ ) {
+		int linha = 0;
+		
+		for(linha = 0; linha < xLinha; linha++ ) {
 			System.out.println("Digite os textos da linha " + (linha+1));
 		
 			for(int coluna = 0; coluna < xColuna; coluna++) {
@@ -29,12 +31,19 @@ public class ex48 {
 				tabela[linha][coluna] = texto;
 				
 			}
+		
+			
+			}	
+	for(int i = 0; i <xLinha; i++) {
+		for(int j = 0; j <xColuna; j++) {
 			
 			
+				System.out.print(tabela[index][j] + " ");
 		}
+		System.out.println();
+		index++;
 		
-		
-			
+	}
 
 	       
 		
