@@ -31,11 +31,11 @@ public class ex48 {
 				tabela[linha][coluna] = texto;
 				
 			}
-		
-			
+					
 			}	
-	for(int i = 0; i <xLinha; i++) {
-		for(int j = 0; j <xColuna; j++) {
+		
+		for(int i = 0; i <xLinha; i++) {
+			for(int j = 0; j <xColuna; j++) {
 			
 			
 				System.out.print(tabela[index][j] + " ");
@@ -44,8 +44,23 @@ public class ex48 {
 		index++;
 		
 	}
-
-	       
+		System.out.println();
+	    
+		System.out.println("Qual posição deseja analisar"); 
+		System.out.println("Linha?");
+	    int posicaoLinha = sc.nextInt();
+	    System.out.println("Coluna?");
+	    int posicaoColuna = sc.nextInt();
+	    
+	    System.out.println("Posição escolhida: " + tabela[posicaoLinha][posicaoColuna]);
+	    System.out.println("à esquerda: " + tabela[posicaoLinha][posicaoColuna-1]);
+	    System.out.println("à direita: " + tabela[posicaoLinha][posicaoColuna+1]);
+	    System.out.println("acima: " + tabela[posicaoLinha-1][posicaoColuna]);
+	    System.out.println("abaixo: " + tabela[posicaoLinha+1][posicaoColuna]);
+	    
+	    
+	    
+	    System.out.println();
 		
 		
 		
