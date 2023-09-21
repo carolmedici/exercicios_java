@@ -58,7 +58,7 @@ public class ex48 {
 			
 			sc.close();
 		}catch(Exception ArrayIndexOutOfBoundsException){
-			System.out.println("Erro: " + ArrayIndexOutOfBoundsException.getMessage());
+			System.out.println("Não é possível imprimir as posições adjacentes >> Fora do limite da matriz.");
 		}
 		
 	}
