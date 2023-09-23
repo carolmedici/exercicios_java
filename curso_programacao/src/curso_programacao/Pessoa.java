@@ -7,6 +7,7 @@ public class Pessoa {
     private String nome;
     private int idade;
     private String cor;
+    private String fruta;
 
     public Pessoa(String nome, int idade, String cor) {
         this.nome = nome;
@@ -14,7 +15,15 @@ public class Pessoa {
         this.cor = cor;
     }
 
-    public String getNome() {
+    
+    public Pessoa(String nome, String cor, String fruta) {
+		this.nome = nome;
+		this.cor = cor;
+		this.fruta = fruta;
+	}
+
+
+	public String getNome() {
         return nome;
     }
 
@@ -33,8 +42,20 @@ public class Pessoa {
         		+ nome 
         		+ ", Idade: " 
         		+ idade 
-        		+ ", Sexo: " 
+        		+ ", Cor: " 
         		+ cor;
+    }
+    
+
+    public String pessoaPreferidos() {
+       
+        return "Nome: " 
+        		+ nome 
+        		+ ", cor: " 
+        		+ cor
+        		+ ", fruta: "
+        		+ fruta ;
+        
     }
 
     public static void main(String[] args) {
@@ -52,7 +73,26 @@ public class Pessoa {
      
            
         
+    
+    
+  
+        List<Pessoa> listaDePreferencias = new ArrayList<>();
+
+  
+        listaDePreferencias.add(new Pessoa("Carol", "Azul", "Morango"));
+        listaDePreferencias.add(new Pessoa("Greg", "Verde", "Maçã"));
+        listaDePreferencias.add(new Pessoa("Tutis", "Amarelo", "Melancia"));
+        
+        System.out.println();
+            
+        for (Pessoa pessoa1 : listaDePreferencias) {
+            System.out.println(pessoa1.pessoaPreferidos());
+      
+     
+           
+        
     }
    	
+   	
     
-}
+    }}
