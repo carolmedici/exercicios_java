@@ -8,6 +8,7 @@ public class Pessoa {
     private int idade;
     private String cor;
     private String fruta;
+    
 
     public Pessoa(String nome, int idade, String cor) {
         this.nome = nome;
@@ -48,13 +49,17 @@ public class Pessoa {
     
 
     public String pessoaPreferidos() {
+    	
+    	String nomeFormatado = nome.substring(0, Math.min(nome.length(), 15));
+    	String corFormatado = nome.substring(0, Math.min(nome.length(), 8));
+    	String frutaFormatado = nome.substring(0, Math.min(nome.length(), 10));
        
         return "Nome: " 
-        		+ nome 
+        		+ nomeFormatado 
         		+ ", cor: " 
-        		+ cor
+        		+ corFormatado
         		+ ", fruta: "
-        		+ fruta ;
+        		+ frutaFormatado ;
         
     }
 
@@ -70,11 +75,7 @@ public class Pessoa {
         for (Pessoa pessoa : listaDePessoas) {
             System.out.println(pessoa.toString());
         }
-     
-           
-        
-    
-    
+                
   
         List<Pessoa> listaDePreferencias = new ArrayList<>();
 
