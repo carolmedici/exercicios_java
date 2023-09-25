@@ -51,15 +51,15 @@ public class Pessoa {
     public String pessoaPreferidos() {
     	
     	String nomeFormatado = nome.substring(0, Math.min(nome.length(), 15));
-    	String corFormatado = nome.substring(0, Math.min(nome.length(), 8));
-    	String frutaFormatado = nome.substring(0, Math.min(nome.length(), 10));
+    	String corFormatado = cor.substring(0, Math.min(cor.length(), 8));
+    	String frutaFormatada = fruta.substring(0, Math.min(fruta.length(), 10));
        
         return "Nome: " 
         		+ nomeFormatado 
         		+ ", cor: " 
         		+ corFormatado
         		+ ", fruta: "
-        		+ frutaFormatado ;
+        		+ frutaFormatada ;
         
     }
 
