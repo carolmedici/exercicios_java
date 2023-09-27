@@ -2,8 +2,6 @@ package curso_programacao;
 
 public class ex51 {
 
-    
-
     public static class Pessoa {
         private String nome;
         private int idade;
@@ -29,7 +27,14 @@ public class ex51 {
             this.idade = idade;
         }
 
-       
+        public static Pessoa novaPessoa(String dados) {
+            String[] partes = dados.split(",");
+          
+            String nome = partes[0];
+            int idade = Integer.parseInt(partes[1]);
+
+            return new Pessoa(nome, idade);
+        }
     }
 }
 
