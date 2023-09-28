@@ -2,6 +2,16 @@ package curso_programacao;
 
 public class ex51 {
 
+    public static class Main {
+        public static void main(String[] args) {
+            String dadosDaString = "Carolina,34";
+            Pessoa pessoa = Pessoa.novaPessoa(dadosDaString);
+
+            System.out.println("Nome: " + pessoa.getNome());
+            System.out.println("Idade: " + pessoa.getIdade());
+        }
+    }
+
     public static class Pessoa {
         private String nome;
         private int idade;
