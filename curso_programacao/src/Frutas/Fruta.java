@@ -37,6 +37,16 @@ public class Fruta {
 	}
 	
 	
+	  public static Fruta novaFruta(String dados) {
+          String[] partes = dados.split(",");
+        
+          String nome = partes[0];
+          String cor = partes[1];
+          Double preco = Double.parseDouble(partes[2]);
+       
+			return new Fruta(nome, cor, preco);
+	
+      }
 	
 	
 	
