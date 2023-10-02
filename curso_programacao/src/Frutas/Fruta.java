@@ -5,11 +5,22 @@ public class Fruta {
 	private String nome;
 	private String cor;
 	private Double preco;
+	private disponibilidade disponibilidade;
 	
-	public Fruta(String nome, String cor, Double preco) {
+	public Fruta(String nome, String cor, Double preco, disponibilidade disponibilidade) {
 		this.nome = nome;
 		this.cor = cor;
 		this.preco = preco;
+		this.disponibilidade = disponibilidade;
+		
+	}
+
+	public disponibilidade getDisponibilidade() {
+		return disponibilidade;
+	}
+
+	public void setDisponibilidade(disponibilidade disponibilidade) {
+		this.disponibilidade = disponibilidade;
 	}
 
 	public String getNome() {
@@ -43,8 +54,9 @@ public class Fruta {
           String nome = partes[0];
           String cor = partes[1];
           Double preco = Double.parseDouble(partes[2]);
+          disponibilidade disponibilidade = null;
        
-			return new Fruta(nome, cor, preco);
+			return new Fruta(nome, cor, preco, disponibilidade);
 	
       }
 	

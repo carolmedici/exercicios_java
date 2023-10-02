@@ -15,6 +15,7 @@ public class App {
             System.out.println("Nome: " + frutaLista.getNome());
             System.out.println("Cor: " + frutaLista.getCor());
             System.out.println("Preço: " + frutaLista.getPreco());
+            System.out.println("Diponibilidade: " + disponibilidade.DISPONIVEL);
         }
     }
 
