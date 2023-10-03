@@ -10,12 +10,24 @@ public class App {
         	Locale.setDefault(Locale.US);
         	
             String dadosDaString = "Goiaba,vermelha, 5.99";
-            Fruta frutaLista = Fruta.novaFruta(dadosDaString);
+            Fruta fruta1 = Fruta.novaFruta(dadosDaString);
 
-            System.out.println("Nome: " + frutaLista.getNome());
-            System.out.println("Cor: " + frutaLista.getCor());
-            System.out.println("Preço: " + frutaLista.getPreco());
+            System.out.println("Nome: " + fruta1.getNome());
+            System.out.println("Cor: " + fruta1.getCor());
+            System.out.println("Preço: " + fruta1.getPreco());
             System.out.println("Diponibilidade: " + disponibilidade.DISPONIVEL);
+            
+            System.out.println();
+        	
+            dadosDaString = "Pêssego,amarelo, 12.99";
+           Fruta fruta2 = Fruta.novaFruta(dadosDaString);
+
+            System.out.println("Nome: " + fruta2.getNome());
+            System.out.println("Cor: " + fruta2.getCor());
+            System.out.println("Preço: " + fruta2.getPreco());
+            System.out.println("Diponibilidade: " + disponibilidade.INDISPONÍVEL);
+            
+            
         }
     }
 
