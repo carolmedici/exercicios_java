@@ -11,6 +11,9 @@ public class ex53 {
 		
 		List<String> sobrenomeArray = new ArrayList<>();
 		List<String> nomeArray = new ArrayList<>();
+		List<String> primeiraLetraArray = new ArrayList<>();
+		List<String> ultimaLetraArray = new ArrayList<>();
+		
 		int index = 0;
 		
 		for(String parte : nomeCompleto) {
@@ -28,8 +31,40 @@ public class ex53 {
 			nomeArray.add(nome);
 			index++;
 		}
+		
+
+		index = 0;
+		for(String parte : nomeCompleto) {
+			String nome = nomeCompleto.get(index);
+			String primeiraLetra = (nome.substring(0,1)).trim();
+			
+			primeiraLetraArray.add(primeiraLetra);
+			index++;
+		}
+		
+		index = 0;
+		
+		for(String parte : nomeCompleto) {
+			String nome = nomeCompleto.get(index);
+			String ultimaLetraPalavra = nome.trim() ;				
+			int tamanho = ultimaLetraPalavra.length();			
+			String ultimaLetra = ultimaLetraPalavra.substring(tamanho - 1);
+			ultimaLetraArray.add(ultimaLetra);
+			
+			index++;
+		}
+		
 		System.out.println((sobrenomeArray));
 		System.out.println();
 		System.out.println(nomeArray);
+		System.out.println();
+		System.out.println(primeiraLetraArray);
+		System.out.println();
+		System.out.println(ultimaLetraArray);
+	}
+
+	private static String lastIndexOf(String trim) {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 }
