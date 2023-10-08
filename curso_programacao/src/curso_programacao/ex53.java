@@ -44,5 +44,15 @@ public class ex53 {
 		System.out.println(primeiraLetraArray);
 		System.out.println();
 		System.out.println(ultimaLetraArray);
+		System.out.println();
+		System.out.print(nomeArray.get(0)+ " ");
+		System.out.println(sobrenomeArray.get(4) );
+		System.out.println();
+		System.out.print(ultimaLetraArray.get(3) );
+		System.out.print(primeiraLetraArray.get(3));
+		System.out.print(ultimaLetraArray.get(2) );
+		
+		
+		
 	}		
 }
