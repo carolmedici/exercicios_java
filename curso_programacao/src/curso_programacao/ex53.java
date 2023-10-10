@@ -23,6 +23,8 @@ public class ex53 {
 		List<String> ultimaLetraArray = new ArrayList<>();
 		List<String> idadeArray = new ArrayList<>();
 		String nome = "";
+		String sobrenome = "";
+		String idade = "";
 	
 		
 		int index = 0;
@@ -31,7 +33,7 @@ public class ex53 {
 			
 			nome = nomeCompleto.get(index);
 			
-			String sobrenome = (nome.substring(15, 30)).trim();
+			sobrenome = (nome.substring(15, 30)).trim();
 			sobrenomeArray.add(sobrenome);
 			
 			String primeiraLetra = (nome.substring(0,1)).trim();			
@@ -51,16 +53,21 @@ public class ex53 {
 	                LocalDate dataNasc = dataNascimento.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 	                LocalDate dataAtual = LocalDate.now();
 	                Period periodo = Period.between(dataNasc, dataAtual);
-	                String idade = String.valueOf(periodo.getYears()); 
+	                idade = String.valueOf(periodo.getYears()); 
 	                idadeArray.add(idade);
 	            } catch (ParseException e) {
 	                e.printStackTrace();
 	            }
+			 
+					
+					System.out.println(nome + " " + sobrenome + ", idade: " + idade + " anos.");
+					
+				
 			
+			index++;	
 			
-			index++;			
 		}				
-		
+		System.out.println();
 		System.out.println((sobrenomeArray));
 		System.out.println();
 		System.out.println(nomeArray);
