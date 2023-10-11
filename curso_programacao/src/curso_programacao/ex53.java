@@ -22,11 +22,14 @@ public class ex53 {
 		List<String> primeiraLetraArray = new ArrayList<>();
 		List<String> ultimaLetraArray = new ArrayList<>();
 		List<String> idadeArray = new ArrayList<>();
+		
+		Boolean maioridade = false;
+		
+		String maiorIdade = "";
 		String nome = "";
 		String sobrenome = "";
 		String idade = "";
 	
-		
 		int index = 0;
 		
 		for(String parte : nomeCompleto) {
@@ -47,7 +50,6 @@ public class ex53 {
 			nome = (nome.substring(0, 14)).trim();
 			nomeArray.add(nome);
 			
-			
 			 try {
 	                Date dataNascimento = sdf.parse(parte.substring(30, 38));
 	                LocalDate dataNasc = dataNascimento.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
@@ -55,18 +57,23 @@ public class ex53 {
 	                Period periodo = Period.between(dataNasc, dataAtual);
 	                idade = String.valueOf(periodo.getYears()); 
 	                idadeArray.add(idade);
+	                
+	                if(Integer.parseInt(idade) > 18) {
+	                	
+	                maioridade = true;
+	                }else {
+	                	maioridade = false;
+	                }
+	               
 	            } catch (ParseException e) {
 	                e.printStackTrace();
 	            }
 			 
+					System.out.println(nome + " " + sobrenome + ", idade: " + idade + " anos. Maior de idade: " + maioridade );
 					
-					System.out.println(nome + " " + sobrenome + ", idade: " + idade + " anos.");
-					
-				
-			
-			index++;	
-			
-		}				
+			index++;				
+		}			
+		
 		System.out.println();
 		System.out.println((sobrenomeArray));
 		System.out.println();
@@ -83,9 +90,11 @@ public class ex53 {
 		System.out.print(primeiraLetraArray.get(3));
 		System.out.println(ultimaLetraArray.get(2) );
 		System.out.println();
-		System.out.println(idadeArray);
-		
-		
-		
+		System.out.println(idadeArray);		
+	}
+
+	private static int parseInt(String idade) {
+		// TODO Auto-generated method stub
+		return 0;
 	}		
 }
