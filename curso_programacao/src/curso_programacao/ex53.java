@@ -62,7 +62,7 @@ public class ex53 {
 	                	
 	                maioridade = true;
 	                }else {
-	                	maioridade = false;
+	                maioridade = false;
 	                }
 	               
 	            } catch (ParseException e) {
