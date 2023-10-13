@@ -9,7 +9,9 @@ public class ex54 {
 		        
 	        sc.useLocale(Locale.US);
 
-	        System.out.print("Digite o valor com duas casas decimais: ");
+	        System.out.print("Digite o valor com duas casas decimais (Ex: 4.00): ");
+	        try {
+	        
 	        double valor = sc.nextDouble();
 
 	        int[] notas = { 100, 50, 20, 10, 5, 2 };
@@ -29,7 +31,10 @@ public class ex54 {
 	            valor %= moeda;
 	            System.out.printf("%d moeda(s) de R$ %.2f\n", quantidadeMoedas, moeda);
 	        }
-
+	        }
+	        catch (Exception e){
+	        	System.out.println(">> Erro << Digite o número com '.' e não ','");
+	        }
 	        sc.close();
 	    }
 	}
