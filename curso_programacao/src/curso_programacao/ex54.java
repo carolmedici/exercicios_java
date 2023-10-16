@@ -13,12 +13,14 @@ public class ex54 {
         double valor = 0;
 
         while (!valorCerto) {
-            System.out.print("Digite o valor com duas casas decimais (Ex: 4.00): ");
+            System.out.println("Digite o valor com duas casas decimais (Ex: 4.00) ");
+            System.out.println("Abaixo você verá o valor divido no menor número de notas e moedas possível:");
+            System.out.println();
             try {
                 valor = sc.nextDouble();
                 valorCerto = true;
             } catch (Exception e) {
-                System.out.println(">> Erro << Digite o número com '.' e não ','");
+                System.out.println(">> Erro << Digite o número com '.' e não ','. (Ex: 4.00)");
                 sc.nextLine(); 
             }
         }
