@@ -9,8 +9,9 @@ public class ex55 {
 	        Scanner sc = new Scanner(System.in);
 	        
 	        int A, N;
-
+	        System.out.println("Digite um número 'A'");
 	        A = sc.nextInt();
+	        System.out.println("Digita o limite de números, 'N', consecutivos que serão somados ao 'A'");
 	        N = sc.nextInt();
 
 	        while (N <= 0) {
@@ -23,7 +24,7 @@ public class ex55 {
 	            soma += A + i;
 	        }
 
-	        System.out.println(soma);
+	        System.out.println("A soma dos números consecutivos de A até N é de: " + soma);
 
 	        sc.close();
 	    }
